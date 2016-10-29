@@ -9,7 +9,7 @@ d = 2
 x = 3
 y = 3
 
-X,Y = np.meshgrid(np.arange(-x,x,0.1),np.arange(-y,y,0.1))
+X,Y = np.meshgrid(np.arange(-x,x,0.02),np.arange(-y,y,0.02))
 
 U = a*(1-X)*X-c*X*Y
 V = -b*Y+d*X*Y

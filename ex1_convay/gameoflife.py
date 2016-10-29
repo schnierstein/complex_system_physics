@@ -12,8 +12,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
-N = 300
-M = 600
+N = 60
+M = 60
 ON = 1
 OFF = 0
 vals = [ON, OFF]

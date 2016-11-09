@@ -2,13 +2,13 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
-N = 500
+N = 300
 grid = 10
 X = np.linspace(-grid,grid,N)
 
 w0 = np.dstack(np.meshgrid(X, X)).reshape(-1, 2)
 
-gamma = 1
+gamma = 0.1
 
 t = np.linspace(0.,50.,100)
 
@@ -22,7 +22,6 @@ wsol = odeint(f,w0[0],t)
 
 sol = np.array([[w0[0][0],w0[0][1],-1]])
 
-print sol
 for point in w0[1:]:
     wsol = odeint(f,point,t)
 
@@ -36,11 +35,12 @@ for point in w0[1:]:
 
 Z = np.array([e[2] for e in sol])
 
-print len(Z)
+print str(len(Z)) + ' Punkte wurden berechnet.'
 plt.figure(1)
 XX, YY = np.meshgrid(X,X)
 C = Z.reshape(N,N)
 plt.pcolormesh(XX,YY,C)
+plt.title('Gamma = ' + str(gamma))
 plt.colorbar()
 plt.scatter([-1,1],[0,0],c= 'green',s=40,marker = 'x',edgecolors='green', label = 'Fix points')
 plt.legend()

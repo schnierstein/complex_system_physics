@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-a = 1
+a = 20
 grid = 2.
 
 X,Y = np.meshgrid(np.arange(-grid,grid,0.2),np.arange(-grid,grid,0.2))

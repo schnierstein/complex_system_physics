@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 K = 1
 N = 30
-grid = 1
 iterations = 1000
 
 X,P = np.meshgrid(np.linspace(0,1,N),np.linspace(-1,1,N))

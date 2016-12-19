@@ -18,7 +18,7 @@ plt.figure(1)
 
 for i in range(iterations):
     X, P = nextStep(X, P, K)
-    plt.scatter(X, P, marker = ".", s = 0.05, alpha = 1, color = "0.0")
+    plt.scatter(X, P, marker = ".", s = 0.01, alpha = 1, color = "0.0")
 
 plt.axis([0,1,-1.5,1.5])
 plt.show()
